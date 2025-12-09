@@ -6,8 +6,8 @@ import L from "leaflet"
 import "leaflet/dist/leaflet.css"
 import { useEffect, useImperativeHandle, forwardRef, useRef } from "react"
 
-// Ícone para blocos móveis (laranja) e fixos (roxo) - sempre com ícone de música
-const createIcon = (isLive: boolean, isFixed: boolean) => {
+// Ícone para blocos - aumenta 20% quando selecionado
+const createIcon = (isLive: boolean, isFixed: boolean, isSelected: boolean) => {
     const bgColor = !isLive
         ? 'bg-zinc-600'
         : isFixed
@@ -20,14 +20,19 @@ const createIcon = (isLive: boolean, isFixed: boolean) => {
             ? 'bg-violet-500/30'
             : 'bg-orange-500/30'
 
+    // Tamanho base e aumentado
+    const size = isSelected ? 12 : 10
+    const outerSize = isSelected ? 14.4 : 12
+    const iconSize = isSelected ? 24 : 20
+
     return L.divIcon({
         className: "custom-marker",
         html: `
-      <div class="relative flex items-center justify-center">
-        ${isLive ? `<div class="absolute w-12 h-12 rounded-full ${pingColor} animate-ping"></div>` : ''}
-        ${isLive ? `<div class="absolute w-12 h-12 rounded-full ${pingColor}"></div>` : ''}
-        <div class="relative w-10 h-10 rounded-full ${bgColor} flex items-center justify-center shadow-lg border-2 border-zinc-900">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <div class="relative flex items-center justify-center transition-transform duration-200">
+        ${isLive ? `<div class="absolute w-${outerSize} h-${outerSize} rounded-full ${pingColor} animate-ping" style="width: ${outerSize * 4}px; height: ${outerSize * 4}px;"></div>` : ''}
+        ${isLive ? `<div class="absolute rounded-full ${pingColor}" style="width: ${outerSize * 4}px; height: ${outerSize * 4}px;"></div>` : ''}
+        <div class="relative rounded-full ${bgColor} flex items-center justify-center shadow-lg border-2 border-zinc-900" style="width: ${size * 4}px; height: ${size * 4}px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="${iconSize}" height="${iconSize}" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M9 18V5l12-2v13"/>
             <circle cx="6" cy="18" r="3"/>
             <circle cx="18" cy="16" r="3"/>
@@ -35,8 +40,8 @@ const createIcon = (isLive: boolean, isFixed: boolean) => {
         </div>
       </div>
     `,
-        iconSize: [48, 48],
-        iconAnchor: [24, 24],
+        iconSize: [isSelected ? 58 : 48, isSelected ? 58 : 48],
+        iconAnchor: [isSelected ? 29 : 24, isSelected ? 29 : 24],
     })
 }
 
@@ -144,19 +149,11 @@ export const LeafletMap = forwardRef<LeafletMapRef, LeafletMapProps>(
                     <Marker
                         key={stage.id}
                         position={[stage.location.lat, stage.location.lng]}
-                        icon={createIcon(stage.isLive, stage.isFixed)}
+                        icon={createIcon(stage.isLive, stage.isFixed, selectedStage === stage.id)}
                         eventHandlers={{
                             click: () => onSelectStage(stage.id === selectedStage ? null : stage.id),
                         }}
-                    >
-                        <Popup className="dark-popup">
-                            <div className="font-semibold">{stage.name}</div>
-                            <div className="text-sm text-gray-400">{stage.currentArtist}</div>
-                            <div className="text-xs text-gray-500 mt-1">
-                                {stage.isFixed ? '📍 Bloco fixo' : '🚶 Bloco móvel'}
-                            </div>
-                        </Popup>
-                    </Marker>
+                    />
                 ))}
 
                 <Marker position={[userLocation.lat, userLocation.lng]} icon={userIcon}>

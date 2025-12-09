@@ -22,18 +22,22 @@ var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.sign
 ;
 ;
 ;
-// Ícone para blocos móveis (laranja) e fixos (roxo) - sempre com ícone de música
-const createIcon = (isLive, isFixed)=>{
+// Ícone para blocos - aumenta 20% quando selecionado
+const createIcon = (isLive, isFixed, isSelected)=>{
     const bgColor = !isLive ? 'bg-zinc-600' : isFixed ? 'bg-violet-500' : 'bg-orange-500';
     const pingColor = !isLive ? '' : isFixed ? 'bg-violet-500/30' : 'bg-orange-500/30';
+    // Tamanho base e aumentado
+    const size = isSelected ? 12 : 10;
+    const outerSize = isSelected ? 14.4 : 12;
+    const iconSize = isSelected ? 24 : 20;
     return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$leaflet$40$1$2e$9$2e$4$2f$node_modules$2f$leaflet$2f$dist$2f$leaflet$2d$src$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].divIcon({
         className: "custom-marker",
         html: `
-      <div class="relative flex items-center justify-center">
-        ${isLive ? `<div class="absolute w-12 h-12 rounded-full ${pingColor} animate-ping"></div>` : ''}
-        ${isLive ? `<div class="absolute w-12 h-12 rounded-full ${pingColor}"></div>` : ''}
-        <div class="relative w-10 h-10 rounded-full ${bgColor} flex items-center justify-center shadow-lg border-2 border-zinc-900">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <div class="relative flex items-center justify-center transition-transform duration-200">
+        ${isLive ? `<div class="absolute w-${outerSize} h-${outerSize} rounded-full ${pingColor} animate-ping" style="width: ${outerSize * 4}px; height: ${outerSize * 4}px;"></div>` : ''}
+        ${isLive ? `<div class="absolute rounded-full ${pingColor}" style="width: ${outerSize * 4}px; height: ${outerSize * 4}px;"></div>` : ''}
+        <div class="relative rounded-full ${bgColor} flex items-center justify-center shadow-lg border-2 border-zinc-900" style="width: ${size * 4}px; height: ${size * 4}px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="${iconSize}" height="${iconSize}" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M9 18V5l12-2v13"/>
             <circle cx="6" cy="18" r="3"/>
             <circle cx="18" cy="16" r="3"/>
@@ -42,12 +46,12 @@ const createIcon = (isLive, isFixed)=>{
       </div>
     `,
         iconSize: [
-            48,
-            48
+            isSelected ? 58 : 48,
+            isSelected ? 58 : 48
         ],
         iconAnchor: [
-            24,
-            24
+            isSelected ? 29 : 24,
+            isSelected ? 29 : 24
         ]
     });
 };
@@ -150,7 +154,7 @@ const LeafletMap = /*#__PURE__*/ _s1((0, __TURBOPACK__imported__module__$5b$proj
                 url: "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
             }, void 0, false, {
                 fileName: "[project]/components/leaflet-map.tsx",
-                lineNumber: 131,
+                lineNumber: 136,
                 columnNumber: 17
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$7_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(MapController, {
@@ -160,7 +164,7 @@ const LeafletMap = /*#__PURE__*/ _s1((0, __TURBOPACK__imported__module__$5b$proj
                 mapRef: mapRef
             }, void 0, false, {
                 fileName: "[project]/components/leaflet-map.tsx",
-                lineNumber: 136,
+                lineNumber: 141,
                 columnNumber: 17
             }, ("TURBOPACK compile-time value", void 0)),
             stages.map((stage)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$7_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$2d$leaflet$40$5$2e$0$2e$0_leaflet$40$1$2e$9$2e$4_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$react$2d$leaflet$2f$lib$2f$Marker$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Marker"], {
@@ -168,46 +172,13 @@ const LeafletMap = /*#__PURE__*/ _s1((0, __TURBOPACK__imported__module__$5b$proj
                         stage.location.lat,
                         stage.location.lng
                     ],
-                    icon: createIcon(stage.isLive, stage.isFixed),
+                    icon: createIcon(stage.isLive, stage.isFixed, selectedStage === stage.id),
                     eventHandlers: {
                         click: ()=>onSelectStage(stage.id === selectedStage ? null : stage.id)
-                    },
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$7_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$2d$leaflet$40$5$2e$0$2e$0_leaflet$40$1$2e$9$2e$4_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$react$2d$leaflet$2f$lib$2f$Popup$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Popup"], {
-                        className: "dark-popup",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$7_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "font-semibold",
-                                children: stage.name
-                            }, void 0, false, {
-                                fileName: "[project]/components/leaflet-map.tsx",
-                                lineNumber: 153,
-                                columnNumber: 29
-                            }, ("TURBOPACK compile-time value", void 0)),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$7_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "text-sm text-gray-400",
-                                children: stage.currentArtist
-                            }, void 0, false, {
-                                fileName: "[project]/components/leaflet-map.tsx",
-                                lineNumber: 154,
-                                columnNumber: 29
-                            }, ("TURBOPACK compile-time value", void 0)),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$7_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "text-xs text-gray-500 mt-1",
-                                children: stage.isFixed ? '📍 Bloco fixo' : '🚶 Bloco móvel'
-                            }, void 0, false, {
-                                fileName: "[project]/components/leaflet-map.tsx",
-                                lineNumber: 155,
-                                columnNumber: 29
-                            }, ("TURBOPACK compile-time value", void 0))
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/leaflet-map.tsx",
-                        lineNumber: 152,
-                        columnNumber: 25
-                    }, ("TURBOPACK compile-time value", void 0))
+                    }
                 }, stage.id, false, {
                     fileName: "[project]/components/leaflet-map.tsx",
-                    lineNumber: 144,
+                    lineNumber: 149,
                     columnNumber: 21
                 }, ("TURBOPACK compile-time value", void 0))),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$7_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$react$2d$leaflet$40$5$2e$0$2e$0_leaflet$40$1$2e$9$2e$4_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$react$2d$leaflet$2f$lib$2f$Marker$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Marker"], {
@@ -220,18 +191,18 @@ const LeafletMap = /*#__PURE__*/ _s1((0, __TURBOPACK__imported__module__$5b$proj
                     children: "Você está aqui"
                 }, void 0, false, {
                     fileName: "[project]/components/leaflet-map.tsx",
-                    lineNumber: 163,
+                    lineNumber: 160,
                     columnNumber: 21
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/components/leaflet-map.tsx",
-                lineNumber: 162,
+                lineNumber: 159,
                 columnNumber: 17
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/components/leaflet-map.tsx",
-        lineNumber: 125,
+        lineNumber: 130,
         columnNumber: 13
     }, ("TURBOPACK compile-time value", void 0));
 }, "UfirTQX8gz9JLM+ILrIoZzrawKk=")), "UfirTQX8gz9JLM+ILrIoZzrawKk=");

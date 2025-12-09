@@ -1,10 +1,9 @@
 // components/stage-card.tsx
 "use client"
 
-import { X, Navigation, Users, Clock, Share2 } from "lucide-react"
+import { X, Navigation, Users, Share2, MapPin, Route } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 interface StageCardProps {
     stage: {
@@ -21,12 +20,6 @@ interface StageCardProps {
     userLocation: { lat: number; lng: number }
     onClose: () => void
 }
-
-const friendAvatars = [
-    { name: "Ana", image: "/woman-with-carnival-makeup.jpg" },
-    { name: "Pedro", image: "/man-with-sunglasses-party.jpg" },
-    { name: "Maria", image: "/woman-dancing-carnival.jpg" },
-]
 
 export function StageCard({ stage, userLocation, onClose }: StageCardProps) {
     const handleNavigate = () => {
@@ -50,83 +43,61 @@ export function StageCard({ stage, userLocation, onClose }: StageCardProps) {
                 console.log("Erro ao compartilhar:", err)
             }
         } else {
-            // Fallback: copia o link
             navigator.clipboard.writeText(shareData.url)
         }
     }
 
     return (
-        <div className="bg-card border border-border rounded-xl p-4 shadow-xl animate-in slide-in-from-bottom-4 duration-300">
-            <div className="flex items-start justify-between mb-3">
-                <div>
-                    <div className="flex items-center gap-2 mb-1">
-                        <h3 className="font-bold text-foreground">{stage.name}</h3>
+        <div className="bg-card border border-border rounded-xl p-3 shadow-xl animate-in slide-in-from-bottom-4 duration-300">
+            <div className="flex items-start justify-between mb-2">
+                <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-1.5 mb-1 flex-wrap">
+                        <h3 className="font-bold text-foreground text-sm truncate">{stage.name}</h3>
                         {stage.isLive && (
-                            <Badge variant="default" className="bg-primary text-primary-foreground text-xs">
+                            <Badge variant="default" className="bg-primary text-primary-foreground text-[10px] px-1.5 py-0">
                                 LIVE
                             </Badge>
                         )}
                         {stage.isFixed ? (
-                            <Badge variant="secondary" className="bg-violet-500/20 text-violet-400 text-xs">
+                            <Badge variant="secondary" className="bg-violet-500/20 text-violet-400 text-[10px] px-1.5 py-0 flex items-center gap-0.5">
+                                <MapPin className="w-2.5 h-2.5" />
                                 Fixo
                             </Badge>
                         ) : (
-                            <Badge variant="secondary" className="bg-orange-500/20 text-orange-400 text-xs">
+                            <Badge variant="secondary" className="bg-orange-500/20 text-orange-400 text-[10px] px-1.5 py-0 flex items-center gap-0.5">
+                                <Route className="w-2.5 h-2.5" />
                                 Móvel
                             </Badge>
                         )}
                     </div>
-                    <p className="text-sm text-muted-foreground">{stage.genre}</p>
+                    <p className="text-xs text-muted-foreground">{stage.genre}</p>
                 </div>
-                <Button variant="ghost" size="icon" onClick={onClose} className="h-8 w-8 hover:!bg-zinc-800">
-                    <X className="w-4 h-4" />
+                <Button variant="ghost" size="icon" onClick={onClose} className="h-6 w-6 hover:!bg-zinc-800">
+                    <X className="w-3 h-3" />
                 </Button>
             </div>
 
-            <div className="bg-muted rounded-lg p-3 mb-3">
-                <p className="text-xs text-muted-foreground mb-1">Tocando agora</p>
-                <p className="font-semibold text-foreground">{stage.currentArtist}</p>
+            <div className="bg-muted rounded-lg p-2 mb-2">
+                <p className="text-[10px] text-muted-foreground">Tocando agora</p>
+                <p className="font-medium text-foreground text-xs">{stage.currentArtist}</p>
             </div>
 
-            <div className="flex items-center gap-4 mb-4 text-sm">
-                <div className="flex items-center gap-1.5 text-muted-foreground">
-                    <Clock className="w-4 h-4" />
-                    <span>{stage.isFixed ? stage.lastMoved : `Moveu ${stage.lastMoved}`}</span>
-                </div>
-                <div className="flex items-center gap-1.5 text-muted-foreground">
-                    <Users className="w-4 h-4" />
-                    <span>{stage.friendsCount} amigos aqui</span>
-                </div>
+            <div className="flex items-center gap-2 mb-2 text-xs text-muted-foreground">
+                <Users className="w-3 h-3" />
+                <span>{stage.friendsCount} amigos aqui</span>
             </div>
-
-            {stage.friendsCount > 0 && (
-                <div className="flex items-center gap-2 mb-4">
-                    <div className="flex -space-x-2">
-                        {friendAvatars.slice(0, Math.min(3, stage.friendsCount)).map((friend, i) => (
-                            <Avatar key={i} className="w-8 h-8 border-2 border-card">
-                                <AvatarImage src={friend.image || "/placeholder.svg"} alt={friend.name} />
-                                <AvatarFallback className="bg-secondary text-secondary-foreground text-xs">
-                                    {friend.name[0]}
-                                </AvatarFallback>
-                            </Avatar>
-                        ))}
-                    </div>
-                    {stage.friendsCount > 3 && (
-                        <span className="text-xs text-muted-foreground">+{stage.friendsCount - 3} mais</span>
-                    )}
-                </div>
-            )}
 
             <div className="flex gap-2">
                 <Button
-                    className="flex-1 bg-primary text-primary-foreground hover:!bg-primary/90"
+                    size="sm"
+                    className="flex-1 bg-primary text-primary-foreground hover:!bg-primary/90 h-8 text-xs"
                     onClick={handleNavigate}
                 >
-                    <Navigation className="w-4 h-4 mr-2" />
+                    <Navigation className="w-3 h-3 mr-1" />
                     Ir para o bloco
                 </Button>
-                <Button variant="outline" size="icon" onClick={handleShare} className="hover:!bg-zinc-800">
-                    <Share2 className="w-4 h-4" />
+                <Button variant="outline" size="icon" onClick={handleShare} className="h-8 w-8 hover:!bg-zinc-800">
+                    <Share2 className="w-3 h-3" />
                 </Button>
             </div>
         </div>

@@ -17,12 +17,11 @@ interface Event {
     endTime: string
     location: string
     friendsGoing: number
+    expectedAudience: number  // novo campo
     isLive: boolean
     isFavorite: boolean
     artists: string[]
-}
-
-const mockEvents: Event[] = [
+}const mockEvents: Event[] = [
     {
         id: "1",
         name: "Bloco da Favorita",
@@ -32,6 +31,7 @@ const mockEvents: Event[] = [
         endTime: "22:00",
         location: "Av. Rio Branco",
         friendsGoing: 12,
+        expectedAudience: 50000,
         isLive: true,
         isFavorite: true,
         artists: ["Anitta", "Ludmilla", "Gloria Groove"],
@@ -45,6 +45,7 @@ const mockEvents: Event[] = [
         endTime: "00:00",
         location: "Centro",
         friendsGoing: 8,
+        expectedAudience: 800000,
         isLive: true,
         isFavorite: false,
         artists: ["Pedro Sampaio", "Dennis DJ"],
@@ -58,6 +59,7 @@ const mockEvents: Event[] = [
         endTime: "23:00",
         location: "R. da Carioca",
         friendsGoing: 5,
+        expectedAudience: 200000,
         isLive: true,
         isFavorite: true,
         artists: ["Preta Gil", "Pabllo Vittar"],
@@ -71,6 +73,7 @@ const mockEvents: Event[] = [
         endTime: "02:00",
         location: "Praça XV",
         friendsGoing: 3,
+        expectedAudience: 300000,
         isLive: false,
         isFavorite: false,
         artists: ["Monobloco Band", "Special Guests"],
@@ -84,6 +87,7 @@ const mockEvents: Event[] = [
         endTime: "20:00",
         location: "Santa Teresa",
         friendsGoing: 7,
+        expectedAudience: 25000,
         isLive: true,
         isFavorite: false,
         artists: ["Banda Carmelitas"],
@@ -97,6 +101,7 @@ const mockEvents: Event[] = [
         endTime: "14:00",
         location: "Santa Teresa",
         friendsGoing: 4,
+        expectedAudience: 15000,
         isLive: false,
         isFavorite: true,
         artists: ["Céu na Terra"],
@@ -110,6 +115,7 @@ const mockEvents: Event[] = [
         endTime: "18:00",
         location: "Lapa",
         friendsGoing: 9,
+        expectedAudience: 30000,
         isLive: true,
         isFavorite: false,
         artists: ["Quizomba"],
@@ -123,6 +129,7 @@ const mockEvents: Event[] = [
         endTime: "22:00",
         location: "Ipanema",
         friendsGoing: 15,
+        expectedAudience: 100000,
         isLive: true,
         isFavorite: true,
         artists: ["Banda de Ipanema"],
@@ -136,6 +143,7 @@ const mockEvents: Event[] = [
         endTime: "21:00",
         location: "Ipanema",
         friendsGoing: 11,
+        expectedAudience: 80000,
         isLive: true,
         isFavorite: false,
         artists: ["Simpatia Band"],
@@ -149,6 +157,7 @@ const mockEvents: Event[] = [
         endTime: "22:00",
         location: "Copacabana",
         friendsGoing: 22,
+        expectedAudience: 500000,
         isLive: true,
         isFavorite: true,
         artists: ["Ludmilla"],
@@ -263,20 +272,15 @@ export function EventsPanel({ onSelectStage, onNavigate }: EventsPanelProps) {
                                     </div>
                                 </div>
 
-                                {/* Friends going */}
-                                <div className="flex items-center gap-1.5 mb-2">
-                                    <div className="flex -space-x-1.5">
-                                        {[1, 2, 3].slice(0, Math.min(3, event.friendsGoing)).map((_, i) => (
-                                            <Avatar key={i} className="w-5 h-5 border border-card">
-                                                <AvatarImage src={`/diverse-group.png?height=20&width=20&query=person ${i + 1}`} />
-                                                <AvatarFallback className="bg-muted text-muted-foreground text-[8px]">{i + 1}</AvatarFallback>
-                                            </Avatar>
-                                        ))}
+                                {/* Público estimado e amigos */}
+                                <div className="flex items-center justify-between mb-2">
+                                    <div className="flex items-center gap-1 text-[10px] text-muted-foreground">
+                                        <Users className="w-2.5 h-2.5" />
+                                        <span>{event.expectedAudience.toLocaleString('pt-BR')}</span>
                                     </div>
-                                    <span className="text-[10px] text-muted-foreground flex items-center gap-0.5">
-                    <Users className="w-2.5 h-2.5" />
-                                        {event.friendsGoing}
-                  </span>
+                                    <div className="flex items-center gap-1 text-[10px] text-primary">
+                                        <span>{event.friendsGoing} amigos</span>
+                                    </div>
                                 </div>
 
                                 {/* Navigate button */}

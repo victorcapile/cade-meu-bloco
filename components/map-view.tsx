@@ -1,8 +1,9 @@
+// components/map-view.tsx
 "use client"
 
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import dynamic from "next/dynamic"
-import { MapPin, Volume2 } from "lucide-react"
+import { Volume2, Locate, LoaderCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { StageCard } from "@/components/stage-card"
 import type { LeafletMapRef } from "@/components/leaflet-map"
@@ -23,12 +24,11 @@ interface MusicStage {
     location: { lat: number; lng: number }
     friendsCount: number
     isLive: boolean
-    isFixed: boolean  // novo campo
+    isFixed: boolean
     lastMoved: string
 }
 
-const mockStages: MusicStage[] = [
-    // CENTRO
+const initialStages: MusicStage[] = [
     {
         id: "1",
         name: "Cordão da Bola Preta",
@@ -37,7 +37,7 @@ const mockStages: MusicStage[] = [
         location: { lat: -22.9028, lng: -43.1778 },
         friendsCount: 45,
         isLive: true,
-        isFixed: false,  // móvel
+        isFixed: false,
         lastMoved: "2 min ago",
     },
     {
@@ -59,11 +59,9 @@ const mockStages: MusicStage[] = [
         location: { lat: -22.9055, lng: -43.1795 },
         friendsCount: 58,
         isLive: true,
-        isFixed: true,  // fixo - tem trio elétrico parado
+        isFixed: true,
         lastMoved: "Av. Rio Branco",
     },
-
-    // SANTA TERESA
     {
         id: "4",
         name: "Carmelitas",
@@ -86,8 +84,6 @@ const mockStages: MusicStage[] = [
         isFixed: false,
         lastMoved: "4 min ago",
     },
-
-    // LAPA
     {
         id: "6",
         name: "Quizomba",
@@ -96,11 +92,9 @@ const mockStages: MusicStage[] = [
         location: { lat: -22.9135, lng: -43.1805 },
         friendsCount: 22,
         isLive: true,
-        isFixed: true,  // fixo - Arcos da Lapa
+        isFixed: true,
         lastMoved: "Arcos da Lapa",
     },
-
-    // ZONA SUL
     {
         id: "7",
         name: "Banda de Ipanema",
@@ -119,7 +113,7 @@ const mockStages: MusicStage[] = [
         currentArtist: "Simpatia Band",
         location: { lat: -22.9865, lng: -43.1920 },
         friendsCount: 35,
-        isLive: false,
+        isLive: true,
         isFixed: false,
         lastMoved: "3 min ago",
     },
@@ -131,7 +125,7 @@ const mockStages: MusicStage[] = [
         location: { lat: -22.9668, lng: -43.1815 },
         friendsCount: 42,
         isLive: true,
-        isFixed: true,  // fixo
+        isFixed: true,
         lastMoved: "Av. Atlântica",
     },
     {
@@ -145,8 +139,6 @@ const mockStages: MusicStage[] = [
         isFixed: true,
         lastMoved: "Copacabana",
     },
-
-    // BOTAFOGO / FLAMENGO
     {
         id: "11",
         name: "Boka de Espuma",
@@ -169,8 +161,6 @@ const mockStages: MusicStage[] = [
         isFixed: false,
         lastMoved: "Começa às 16h",
     },
-
-    // LEBLON
     {
         id: "13",
         name: "Filhos da P!",
@@ -178,12 +168,10 @@ const mockStages: MusicStage[] = [
         currentArtist: "Filhos da P!",
         location: { lat: -22.9875, lng: -43.2235 },
         friendsCount: 25,
-        isLive: false,
-        isFixed: true,  // fixo - Posto 12
+        isLive: true,
+        isFixed: true,
         lastMoved: "Posto 12",
     },
-
-    // TIJUCA
     {
         id: "14",
         name: "Banda Cultural do Jiló",
@@ -195,8 +183,6 @@ const mockStages: MusicStage[] = [
         isFixed: false,
         lastMoved: "4 min ago",
     },
-
-    // VILA ISABEL
     {
         id: "15",
         name: "Bloco Gargalhada",
@@ -208,8 +194,6 @@ const mockStages: MusicStage[] = [
         isFixed: false,
         lastMoved: "5 min ago",
     },
-
-    // BARRA DA TIJUCA
     {
         id: "16",
         name: "Bloco da Barra",
@@ -218,11 +202,9 @@ const mockStages: MusicStage[] = [
         location: { lat: -23.0005, lng: -43.3655 },
         friendsCount: 30,
         isLive: true,
-        isFixed: true,  // fixo
+        isFixed: true,
         lastMoved: "Av. Lúcio Costa",
     },
-
-    // ILHA DO GOVERNADOR
     {
         id: "17",
         name: "Carijó",
@@ -230,12 +212,10 @@ const mockStages: MusicStage[] = [
         currentArtist: "Carijó Band",
         location: { lat: -22.8165, lng: -43.2095 },
         friendsCount: 15,
-        isLive: false,
+        isLive: true,
         isFixed: false,
         lastMoved: "4 min ago",
     },
-
-    // MÉIER
     {
         id: "18",
         name: "Loucura Suburbana",
@@ -247,8 +227,6 @@ const mockStages: MusicStage[] = [
         isFixed: false,
         lastMoved: "3 min ago",
     },
-
-    // BANGU
     {
         id: "19",
         name: "Virilha de Minhoca",
@@ -260,8 +238,6 @@ const mockStages: MusicStage[] = [
         isFixed: false,
         lastMoved: "5 min ago",
     },
-
-    // GLÓRIA
     {
         id: "20",
         name: "Arteiros da Glória",
@@ -269,11 +245,13 @@ const mockStages: MusicStage[] = [
         currentArtist: "Arteiros",
         location: { lat: -22.9225, lng: -43.1755 },
         friendsCount: 21,
-        isLive: false,
+        isLive: true,
         isFixed: false,
         lastMoved: "5 min ago",
     },
 ]
+
+const DEFAULT_LOCATION = { lat: -22.9068, lng: -43.1729 }
 
 interface MapViewProps {
     selectedStage: string | null
@@ -281,9 +259,58 @@ interface MapViewProps {
 }
 
 export function MapView({ selectedStage, onSelectStage }: MapViewProps) {
-    const [stages] = useState(mockStages)
-    const [userLocation] = useState({ lat: -22.9068, lng: -43.1729 })
+    const [stages] = useState(initialStages)
+    const [userLocation, setUserLocation] = useState(DEFAULT_LOCATION)
+    const [isLoadingLocation, setIsLoadingLocation] = useState(true)
+    const [locationError, setLocationError] = useState<string | null>(null)
     const mapRef = useRef<LeafletMapRef>(null)
+
+    useEffect(() => {
+        if (!navigator.geolocation) {
+            setLocationError("Geolocalização não suportada pelo navegador")
+            setIsLoadingLocation(false)
+            return
+        }
+
+        const options: PositionOptions = {
+            enableHighAccuracy: true,
+            timeout: 10000,
+            maximumAge: 0,
+        }
+
+        const watchId = navigator.geolocation.watchPosition(
+            (position) => {
+                setUserLocation({
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude,
+                })
+                setIsLoadingLocation(false)
+                setLocationError(null)
+            },
+            (error) => {
+                console.error("Erro ao obter localização:", error)
+                switch (error.code) {
+                    case error.PERMISSION_DENIED:
+                        setLocationError("Permissão de localização negada")
+                        break
+                    case error.POSITION_UNAVAILABLE:
+                        setLocationError("Localização indisponível")
+                        break
+                    case error.TIMEOUT:
+                        setLocationError("Tempo esgotado ao obter localização")
+                        break
+                    default:
+                        setLocationError("Erro ao obter localização")
+                }
+                setIsLoadingLocation(false)
+            },
+            options
+        )
+
+        return () => {
+            navigator.geolocation.clearWatch(watchId)
+        }
+    }, [])
 
     const selectedStageData = stages.find((s) => s.id === selectedStage)
 
@@ -301,14 +328,26 @@ export function MapView({ selectedStage, onSelectStage }: MapViewProps) {
                 onSelectStage={onSelectStage}
             />
 
-            {/* Legend */}
+            {isLoadingLocation && (
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-card/90 backdrop-blur-sm rounded-lg p-4 z-[1000] flex items-center gap-2">
+                    <LoaderCircle className="w-5 h-5 animate-spin text-primary" />
+                    <span className="text-sm">Obtendo sua localização...</span>
+                </div>
+            )}
+
+            {locationError && (
+                <div className="absolute top-35 left-4 right-4 bg-red-500/20 border border-red-500/50 text-red-400 rounded-lg p-3 z-[2000] text-sm">
+                    {locationError}. Usando localização padrão.
+                </div>
+            )}
+
             <div className="absolute top-4 left-4 bg-card/90 backdrop-blur-sm rounded-lg p-3 space-y-2 z-[1000]">
                 <div className="flex items-center gap-2 text-xs">
-                    <div className="w-3 h-3 rounded-full bg-orange-500 animate-pulse" />
+                    <div className="w-3 h-3 rounded-full bg-orange-500" />
                     <span className="text-foreground">Bloco móvel</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs">
-                    <div className="w-3 h-3 rounded-full bg-violet-500 animate-pulse" />
+                    <div className="w-3 h-3 rounded-full bg-violet-500" />
                     <span className="text-foreground">Bloco fixo</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs">
@@ -321,7 +360,6 @@ export function MapView({ selectedStage, onSelectStage }: MapViewProps) {
                 </div>
             </div>
 
-            {/* Live indicator */}
             <div className="absolute top-4 right-4 flex items-center gap-2 bg-card/90 backdrop-blur-sm rounded-full px-3 py-1.5 z-[1000]">
                 <Volume2 className="w-4 h-4 text-primary animate-pulse" />
                 <span className="text-xs font-medium text-foreground">
@@ -329,19 +367,23 @@ export function MapView({ selectedStage, onSelectStage }: MapViewProps) {
         </span>
             </div>
 
-            {/* Recenter button */}
             <Button
                 size="icon"
                 variant="secondary"
-                className="absolute bottom-24 right-4 rounded-full shadow-lg z-[1000]"
+                className="absolute bottom-24 right-4 rounded-full shadow-lg z-[1000] hover:!bg-zinc-700"
                 onClick={handleCenterOnUser}
+                disabled={isLoadingLocation}
             >
-                <MapPin className="w-5 h-5" />
+                {isLoadingLocation ? (
+                    <LoaderCircle className="w-5 h-5 animate-spin" />
+                ) : (
+                    <Locate className="w-5 h-5" />
+                )}
             </Button>
 
-            {/* Selected stage card */}
+            {/* Card na parte inferior */}
             {selectedStageData && (
-                <div className="absolute bottom-20 left-4 right-4 z-[1000]">
+                <div className="absolute bottom-10 left-4 right-4 max-w-md mx-auto z-[1000]">
                     <StageCard
                         stage={selectedStageData}
                         userLocation={userLocation}
