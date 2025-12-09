@@ -89,8 +89,10 @@ export function FriendsPanel() {
 
   const atCarnivalCount = mockFriends.filter((f) => f.status === "at-carnival").length
   const goingCount = mockFriends.filter((f) => f.status === "going").length
+    const atHomeCount = mockFriends.filter((f) => f.status === "offline").length
 
-  return (
+
+    return (
     <div className="flex flex-col h-full bg-background">
       {/* Header */}
       <div className="p-4 space-y-4">
@@ -98,7 +100,7 @@ export function FriendsPanel() {
           <div>
             <h2 className="text-xl font-bold text-foreground">Friends</h2>
             <p className="text-sm text-muted-foreground">
-              {atCarnivalCount} no carnaval, {goingCount} a caminho
+              {atCarnivalCount} no carnaval, {atHomeCount} em casa
             </p>
           </div>
           <Button size="sm" variant="outline" className="gap-2 bg-transparent">
