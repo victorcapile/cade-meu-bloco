@@ -97,7 +97,7 @@ export function FriendsPanel() {
           <div>
             <h2 className="text-xl font-bold text-foreground">Friends</h2>
             <p className="text-sm text-muted-foreground">
-              {atCarnivalCount} at carnival, {goingCount} on the way
+              {atCarnivalCount} no carnaval, {goingCount} a caminho
             </p>
           </div>
           <Button size="sm" variant="outline" className="gap-2 bg-transparent">
@@ -117,46 +117,40 @@ export function FriendsPanel() {
           />
         </div>
 
+          {/* Connect Social */}
+          <div className="px-4 pb-4">
+              <div className="bg-card border border-border rounded-lg p-3">
+                  <p className="text-sm font-medium text-foreground mb-2">Conecte sua rede para descobrir amigos!</p>
+                  <div className="flex gap-2">
+                      <Button
+                          size="sm"
+                          variant="outline"
+                          className="flex-1 gap-2 border-secondary text-secondary hover:bg-secondary/10 bg-transparent"
+                      >
+                          <Instagram className="w-4 h-4" />
+                          Instagram
+                      </Button>
+                  </div>
+              </div>
+          </div>
+
         {/* Filter tabs */}
         <Tabs value={activeFilter} onValueChange={(v) => setActiveFilter(v as typeof activeFilter)}>
           <TabsList className="w-full bg-muted">
             <TabsTrigger value="all" className="flex-1">
-              All
+              Todos
             </TabsTrigger>
             <TabsTrigger value="at-carnival" className="flex-1">
-              At Carnival
+              No Carnaval
             </TabsTrigger>
             <TabsTrigger value="going" className="flex-1">
-              Coming
+              Chegando
             </TabsTrigger>
           </TabsList>
         </Tabs>
       </div>
 
-      {/* Connect Social */}
-      <div className="px-4 pb-4">
-        <div className="bg-card border border-border rounded-lg p-3">
-          <p className="text-sm font-medium text-foreground mb-2">Conecte suas redes</p>
-          <div className="flex gap-2">
-            <Button
-              size="sm"
-              variant="outline"
-              className="flex-1 gap-2 border-secondary text-secondary hover:bg-secondary/10 bg-transparent"
-            >
-              <Instagram className="w-4 h-4" />
-              Instagram
-            </Button>
-            <Button
-              size="sm"
-              variant="outline"
-              className="flex-1 gap-2 border-accent text-accent hover:bg-accent/10 bg-transparent"
-            >
-              <MessageCircle className="w-4 h-4" />
-              WhatsApp
-            </Button>
-          </div>
-        </div>
-      </div>
+
 
       {/* Friends list */}
       <div className="flex-1 overflow-y-auto px-4 pb-4">
