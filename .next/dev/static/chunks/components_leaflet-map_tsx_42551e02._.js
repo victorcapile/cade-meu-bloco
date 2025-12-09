@@ -1,9 +1,9 @@
 (globalThis.TURBOPACK_CHUNK_LISTS || (globalThis.TURBOPACK_CHUNK_LISTS = [])).push({
     script: typeof document === "object" ? document.currentScript : undefined,
     chunks: [
-  "static/chunks/components_leaflet-map_tsx_2b0db1b5._.js",
-  "static/chunks/_eb8a9f15._.js",
-  "static/chunks/node_modules_f8d5a3a1._.js"
+  "static/chunks/node_modules_11cd6a26._.js",
+  "static/chunks/components_leaflet-map_tsx_89c6d53a._.js",
+  "static/chunks/node_modules_leaflet_dist_leaflet_ef5f0413.css"
 ],
     source: "dynamic"
 });

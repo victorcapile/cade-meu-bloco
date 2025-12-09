@@ -586,14 +586,12 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$shared$2f$lib$2f$app$2d$dynamic$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/shared/lib/app-dynamic.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$map$2d$pin$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MapPin$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/map-pin.js [app-client] (ecmascript) <export default as MapPin>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$music$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Music$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/music.js [app-client] (ecmascript) <export default as Music>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Navigation$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/navigation.js [app-client] (ecmascript) <export default as Navigation>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$volume$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Volume2$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/volume-2.js [app-client] (ecmascript) <export default as Volume2>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/button.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/badge.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$stage$2d$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/stage-card.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/utils.ts [app-client] (ecmascript)");
+;
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
@@ -602,7 +600,23 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-;
+// Import dinâmico pra evitar SSR (Leaflet não funciona no servidor)
+const LeafletMap = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$shared$2f$lib$2f$app$2d$dynamic$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])(()=>__turbopack_context__.A("[project]/components/leaflet-map.tsx [app-client] (ecmascript, next/dynamic entry, async loader)").then((mod)=>mod.LeafletMap), {
+    loadableGenerated: {
+        modules: [
+            "[project]/components/leaflet-map.tsx [app-client] (ecmascript, next/dynamic entry)"
+        ]
+    },
+    ssr: false,
+    loading: ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "w-full h-full bg-muted/30 animate-pulse"
+        }, void 0, false, {
+            fileName: "[project]/components/map-view.tsx",
+            lineNumber: 12,
+            columnNumber: 20
+        }, ("TURBOPACK compile-time value", void 0))
+});
+_c = LeafletMap;
 const mockStages = [
     {
         id: "1",
@@ -610,8 +624,8 @@ const mockStages = [
         genre: "Samba",
         currentArtist: "Anitta & Band",
         location: {
-            x: 25,
-            y: 30
+            lat: -22.9035,
+            lng: -43.1823
         },
         friendsCount: 12,
         isLive: true,
@@ -623,8 +637,8 @@ const mockStages = [
         genre: "Marchinhas",
         currentArtist: "Pedro Sampaio",
         location: {
-            x: 60,
-            y: 45
+            lat: -22.9055,
+            lng: -43.1765
         },
         friendsCount: 8,
         isLive: true,
@@ -636,8 +650,8 @@ const mockStages = [
         genre: "Funk & Pop",
         currentArtist: "Preta Gil",
         location: {
-            x: 40,
-            y: 70
+            lat: -22.9085,
+            lng: -43.1790
         },
         friendsCount: 5,
         isLive: true,
@@ -649,8 +663,8 @@ const mockStages = [
         genre: "Percussion",
         currentArtist: "Monobloco",
         location: {
-            x: 75,
-            y: 25
+            lat: -22.9020,
+            lng: -43.1740
         },
         friendsCount: 3,
         isLive: false,
@@ -659,223 +673,51 @@ const mockStages = [
 ];
 function MapView({ selectedStage, onSelectStage }) {
     _s();
-    const [stages, setStages] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(mockStages);
+    const [stages] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(mockStages);
     const [userLocation] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
-        x: 50,
-        y: 50
+        lat: -22.9068,
+        lng: -43.1729
     });
-    // Simulate stage movement
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "MapView.useEffect": ()=>{
-            const interval = setInterval({
-                "MapView.useEffect.interval": ()=>{
-                    setStages({
-                        "MapView.useEffect.interval": (prev)=>prev.map({
-                                "MapView.useEffect.interval": (stage)=>({
-                                        ...stage,
-                                        location: {
-                                            x: Math.max(10, Math.min(90, stage.location.x + (Math.random() - 0.5) * 3)),
-                                            y: Math.max(10, Math.min(90, stage.location.y + (Math.random() - 0.5) * 3))
-                                        }
-                                    })
-                            }["MapView.useEffect.interval"])
-                    }["MapView.useEffect.interval"]);
-                }
-            }["MapView.useEffect.interval"], 5000);
-            return ({
-                "MapView.useEffect": ()=>clearInterval(interval)
-            })["MapView.useEffect"];
-        }
-    }["MapView.useEffect"], []);
     const selectedStageData = stages.find((s)=>s.id === selectedStage);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "relative w-full h-full",
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute inset-0 bg-muted/30",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "w-full h-full opacity-20",
-                        style: {
-                            backgroundImage: `
-              linear-gradient(to right, var(--border) 1px, transparent 1px),
-              linear-gradient(to bottom, var(--border) 1px, transparent 1px)
-            `,
-                            backgroundSize: "40px 40px"
-                        }
-                    }, void 0, false, {
-                        fileName: "[project]/components/map-view.tsx",
-                        lineNumber: 96,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute top-[20%] left-[10%] text-xs text-muted-foreground/50 rotate-0",
-                        children: "Av. Rio Branco"
-                    }, void 0, false, {
-                        fileName: "[project]/components/map-view.tsx",
-                        lineNumber: 108,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute top-[50%] left-[5%] text-xs text-muted-foreground/50 -rotate-90",
-                        children: "R. da Carioca"
-                    }, void 0, false, {
-                        fileName: "[project]/components/map-view.tsx",
-                        lineNumber: 109,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute bottom-[30%] right-[15%] text-xs text-muted-foreground/50",
-                        children: "Praça XV"
-                    }, void 0, false, {
-                        fileName: "[project]/components/map-view.tsx",
-                        lineNumber: 110,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/components/map-view.tsx",
-                lineNumber: 95,
-                columnNumber: 7
-            }, this),
-            stages.map((stage)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                    onClick: ()=>onSelectStage(stage.id === selectedStage ? null : stage.id),
-                    className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("absolute transform -translate-x-1/2 -translate-y-1/2 transition-all duration-500 z-10", selectedStage === stage.id && "z-20"),
-                    style: {
-                        left: `${stage.location.x}%`,
-                        top: `${stage.location.y}%`
-                    },
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("relative flex items-center justify-center", stage.isLive && "animate-pulse-music"),
-                            children: [
-                                stage.isLive && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute w-16 h-16 rounded-full bg-primary/20 animate-ping"
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/map-view.tsx",
-                                            lineNumber: 128,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute w-12 h-12 rounded-full bg-primary/30"
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/map-view.tsx",
-                                            lineNumber: 129,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("relative w-10 h-10 rounded-full flex items-center justify-center shadow-lg", stage.isLive ? "bg-primary" : "bg-muted", selectedStage === stage.id && "ring-2 ring-secondary ring-offset-2 ring-offset-background"),
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$music$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Music$3e$__["Music"], {
-                                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-5 h-5", stage.isLive ? "text-primary-foreground" : "text-muted-foreground")
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/map-view.tsx",
-                                        lineNumber: 141,
-                                        columnNumber: 15
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "[project]/components/map-view.tsx",
-                                    lineNumber: 134,
-                                    columnNumber: 13
-                                }, this),
-                                stage.friendsCount > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
-                                    className: "absolute -top-2 -right-2 h-5 min-w-5 flex items-center justify-center p-0 bg-secondary text-secondary-foreground text-xs",
-                                    children: stage.friendsCount
-                                }, void 0, false, {
-                                    fileName: "[project]/components/map-view.tsx",
-                                    lineNumber: 146,
-                                    columnNumber: 15
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/components/map-view.tsx",
-                            lineNumber: 124,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("mt-1 px-2 py-0.5 rounded-md text-xs font-medium whitespace-nowrap transition-all", selectedStage === stage.id ? "bg-primary text-primary-foreground" : "bg-card/90 text-foreground"),
-                            children: stage.name
-                        }, void 0, false, {
-                            fileName: "[project]/components/map-view.tsx",
-                            lineNumber: 153,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, stage.id, true, {
-                    fileName: "[project]/components/map-view.tsx",
-                    lineNumber: 115,
-                    columnNumber: 9
-                }, this)),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute transform -translate-x-1/2 -translate-y-1/2 z-30",
-                style: {
-                    left: `${userLocation.x}%`,
-                    top: `${userLocation.y}%`
-                },
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "relative",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "absolute w-8 h-8 rounded-full bg-accent/30 animate-ping"
-                        }, void 0, false, {
-                            fileName: "[project]/components/map-view.tsx",
-                            lineNumber: 170,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "relative w-6 h-6 rounded-full bg-accent border-2 border-background flex items-center justify-center",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Navigation$3e$__["Navigation"], {
-                                className: "w-3 h-3 text-accent-foreground"
-                            }, void 0, false, {
-                                fileName: "[project]/components/map-view.tsx",
-                                lineNumber: 172,
-                                columnNumber: 13
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/components/map-view.tsx",
-                            lineNumber: 171,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/components/map-view.tsx",
-                    lineNumber: 169,
-                    columnNumber: 9
-                }, this)
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(LeafletMap, {
+                stages: stages,
+                userLocation: userLocation,
+                selectedStage: selectedStage,
+                onSelectStage: onSelectStage
             }, void 0, false, {
                 fileName: "[project]/components/map-view.tsx",
-                lineNumber: 165,
-                columnNumber: 7
+                lineNumber: 82,
+                columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute top-4 left-4 bg-card/90 backdrop-blur-sm rounded-lg p-3 space-y-2",
+                className: "absolute top-4 left-4 bg-card/90 backdrop-blur-sm rounded-lg p-3 space-y-2 z-[1000]",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex items-center gap-2 text-xs",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "w-3 h-3 rounded-full bg-primary animate-pulse-music"
+                                className: "w-3 h-3 rounded-full bg-primary animate-pulse"
                             }, void 0, false, {
                                 fileName: "[project]/components/map-view.tsx",
-                                lineNumber: 180,
-                                columnNumber: 11
+                                lineNumber: 92,
+                                columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "text-foreground",
                                 children: "Bloco rolando"
                             }, void 0, false, {
                                 fileName: "[project]/components/map-view.tsx",
-                                lineNumber: 181,
-                                columnNumber: 11
+                                lineNumber: 93,
+                                columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/map-view.tsx",
-                        lineNumber: 179,
-                        columnNumber: 9
+                        lineNumber: 91,
+                        columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex items-center gap-2 text-xs",
@@ -884,22 +726,22 @@ function MapView({ selectedStage, onSelectStage }) {
                                 className: "w-3 h-3 rounded-full bg-muted"
                             }, void 0, false, {
                                 fileName: "[project]/components/map-view.tsx",
-                                lineNumber: 184,
-                                columnNumber: 11
+                                lineNumber: 96,
+                                columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "text-muted-foreground",
                                 children: "Começando em breve"
                             }, void 0, false, {
                                 fileName: "[project]/components/map-view.tsx",
-                                lineNumber: 185,
-                                columnNumber: 11
+                                lineNumber: 97,
+                                columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/map-view.tsx",
-                        lineNumber: 183,
-                        columnNumber: 9
+                        lineNumber: 95,
+                        columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex items-center gap-2 text-xs",
@@ -908,69 +750,38 @@ function MapView({ selectedStage, onSelectStage }) {
                                 className: "w-3 h-3 rounded-full bg-accent"
                             }, void 0, false, {
                                 fileName: "[project]/components/map-view.tsx",
-                                lineNumber: 188,
-                                columnNumber: 11
+                                lineNumber: 100,
+                                columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "text-foreground",
                                 children: "Você"
                             }, void 0, false, {
                                 fileName: "[project]/components/map-view.tsx",
-                                lineNumber: 189,
-                                columnNumber: 11
+                                lineNumber: 101,
+                                columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/map-view.tsx",
-                        lineNumber: 187,
-                        columnNumber: 9
+                        lineNumber: 99,
+                        columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/map-view.tsx",
-                lineNumber: 178,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                size: "icon",
-                variant: "secondary",
-                className: "absolute bottom-24 right-4 rounded-full shadow-lg",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$map$2d$pin$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MapPin$3e$__["MapPin"], {
-                    className: "w-5 h-5"
-                }, void 0, false, {
-                    fileName: "[project]/components/map-view.tsx",
-                    lineNumber: 195,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/components/map-view.tsx",
-                lineNumber: 194,
-                columnNumber: 7
-            }, this),
-            selectedStageData && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute bottom-20 left-4 right-4",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$stage$2d$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["StageCard"], {
-                    stage: selectedStageData,
-                    onClose: ()=>onSelectStage(null)
-                }, void 0, false, {
-                    fileName: "[project]/components/map-view.tsx",
-                    lineNumber: 201,
-                    columnNumber: 11
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/components/map-view.tsx",
-                lineNumber: 200,
-                columnNumber: 9
+                lineNumber: 90,
+                columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute top-4 right-4 flex items-center gap-2 bg-card/90 backdrop-blur-sm rounded-full px-3 py-1.5",
+                className: "absolute top-4 right-4 flex items-center gap-2 bg-card/90 backdrop-blur-sm rounded-full px-3 py-1.5 z-[1000]",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$volume$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Volume2$3e$__["Volume2"], {
-                        className: "w-4 h-4 text-primary animate-pulse-music"
+                        className: "w-4 h-4 text-primary animate-pulse"
                     }, void 0, false, {
                         fileName: "[project]/components/map-view.tsx",
-                        lineNumber: 207,
-                        columnNumber: 9
+                        lineNumber: 107,
+                        columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         className: "text-xs font-medium text-foreground",
@@ -980,26 +791,58 @@ function MapView({ selectedStage, onSelectStage }) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/map-view.tsx",
-                        lineNumber: 208,
-                        columnNumber: 9
+                        lineNumber: 108,
+                        columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/map-view.tsx",
-                lineNumber: 206,
-                columnNumber: 7
+                lineNumber: 106,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                size: "icon",
+                variant: "secondary",
+                className: "absolute bottom-24 right-4 rounded-full shadow-lg z-[1000]",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$map$2d$pin$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MapPin$3e$__["MapPin"], {
+                    className: "w-5 h-5"
+                }, void 0, false, {
+                    fileName: "[project]/components/map-view.tsx",
+                    lineNumber: 119,
+                    columnNumber: 17
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/components/map-view.tsx",
+                lineNumber: 114,
+                columnNumber: 13
+            }, this),
+            selectedStageData && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute bottom-20 left-4 right-4 z-[1000]",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$stage$2d$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["StageCard"], {
+                    stage: selectedStageData,
+                    onClose: ()=>onSelectStage(null)
+                }, void 0, false, {
+                    fileName: "[project]/components/map-view.tsx",
+                    lineNumber: 125,
+                    columnNumber: 21
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/components/map-view.tsx",
+                lineNumber: 124,
+                columnNumber: 17
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/map-view.tsx",
-        lineNumber: 93,
-        columnNumber: 5
+        lineNumber: 81,
+        columnNumber: 9
     }, this);
 }
-_s(MapView, "TwYIynlNRKWlOl9TfSb3O+aeCQ8=");
-_c = MapView;
-var _c;
-__turbopack_context__.k.register(_c, "MapView");
+_s(MapView, "Gx/RKTzqjZepKCUOL8NLze/dWSU=");
+_c1 = MapView;
+var _c, _c1;
+__turbopack_context__.k.register(_c, "LeafletMap");
+__turbopack_context__.k.register(_c1, "MapView");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }

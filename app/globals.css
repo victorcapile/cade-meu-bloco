@@ -141,3 +141,18 @@
 .animate-pulse-music {
   animation: pulse-music 1.5s ease-in-out infinite;
 }
+
+/* Leaflet dark popup */
+.leaflet-popup-content-wrapper {
+    background: oklch(0.18 0.02 280);
+    color: oklch(0.98 0 0);
+    border-radius: 0.75rem;
+}
+
+.leaflet-popup-tip {
+    background: oklch(0.18 0.02 280);
+}
+
+.leaflet-popup-close-button {
+    color: oklch(0.7 0 0) !important;
+}
