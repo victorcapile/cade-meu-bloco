@@ -11,8 +11,8 @@ interface BottomNavProps {
 export function BottomNav({ activeTab, onTabChange }: BottomNavProps) {
   const tabs = [
     { id: "map" as const, label: "Live Map", icon: Map },
-    { id: "friends" as const, label: "Friends", icon: Users },
-    { id: "events" as const, label: "Events", icon: Calendar },
+    { id: "friends" as const, label: "Amigos", icon: Users },
+    { id: "events" as const, label: "Blocos", icon: Calendar },
   ]
 
   return (

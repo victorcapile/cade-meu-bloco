@@ -27,15 +27,6 @@ npm install
 npm run dev
 ```
 
-## Scripts
-
-| Comando | Descrição |
-|---------|-----------|
-| `npm run dev` | Inicia servidor de desenvolvimento |
-| `npm run build` | Gera build de produção |
-| `npm run start` | Inicia servidor de produção |
-| `npm run lint` | Executa verificação de código |
-
 ## Licença
 
 MIT

@@ -1,19 +1,450 @@
-[00:00:00.641] Server  LOG      ✓ Ready in 419ms
-[00:00:07.666] Server  WARN     ⚠ Cross origin request detected from 192.168.1.43 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:00:07.684] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:07.920] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:07.920] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:07.920] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://192.168.1.43:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://192.168.1.43:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765249487203}
-[00:00:12.022] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:12.022] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:12.022] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:12.022] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765249485398}
-[00:00:12.746] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:14.248] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:14.248] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:14.248] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765249492543}
-[00:00:17.370] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:17.667] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:17.667] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:17.667] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765249496951}
+[00:00:00.490] Server  WARN     ⚠ Minimum recommended TypeScript version is v5.1.0, older versions can potentially be incompatible with Next.js. Detected: 5.0.2
+[00:00:00.565] Server  LOG      ✓ Ready in 358ms
+[00:00:03.408] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:03.525] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:03.525] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:03.525] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765290477430}
+[00:01:53.079] Server  LOG      ✓ Compiled in 32ms
+[00:01:53.160] Browser ERROR   uncaughtError: ReferenceError: React is not defined
+[00:02:19.240] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:02:19.264] Server  LOG      ✓ Compiled in 18ms
+[00:02:19.489] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:19.677] Browser ERROR   uncaughtError: ReferenceError: React is not defined
+[00:02:20.982] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:21.226] Browser ERROR   uncaughtError: ReferenceError: React is not defined
+[00:02:23.744] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:02:23.805] Server  LOG      ✓ Compiled in 18ms
+[00:02:23.973] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:24.162] Browser ERROR   uncaughtError: ReferenceError: React is not defined
+[00:02:25.390] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:02:25.442] Server  LOG      ✓ Compiled in 14ms
+[00:02:25.545] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:25.840] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:02:25.840] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:02:25.840] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765290619745}
+[00:02:37.772] Server  LOG      ✓ Compiled in 27ms
+[00:02:39.793] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:40.006] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:02:40.006] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:02:40.006] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765290633907}
+[00:03:02.343] Server  LOG      ✓ Compiled in 19ms
+[00:03:02.400] Browser ERROR   uncaughtError: ReferenceError: React is not defined
+[00:03:04.438] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:04.680] Browser ERROR   uncaughtError: ReferenceError: React is not defined
+[00:04:09.607] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:04:09.630] Server  LOG      ✓ Compiled in 15ms
+[00:04:09.759] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:10.066] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:04:10.066] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:04:10.066] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765290723967}
+[00:04:21.794] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:22.079] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:04:22.079] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:04:22.079] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765290735983}
+[00:06:53.017] Server  LOG      ✓ Compiled in 35ms
+[00:06:53.418] Browser ERROR   uncaughtError: TypeError: can't access property "appendChild", this.getPane() is undefined
+[00:06:53.418] Browser ERROR   uncaughtError: Error: Map container is being reused by another instance
+[00:06:55.541] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:55.741] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:06:55.741] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:06:55.741] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765290889638}
+[00:09:03.627] Server  LOG      ✓ Compiled in 31ms
+[00:10:12.432] Server  LOG      ✓ Compiled in 17ms
+[00:10:38.920] Server  LOG      ✓ Compiled in 19ms
+[00:10:40.940] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:41.136] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:10:41.136] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:10:41.136] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765291115031}
+[00:12:20.769] Server  LOG      ✓ Compiled in 33ms
+[00:12:21.170] Browser ERROR   uncaughtError: TypeError: can't access property "appendChild", this.getPane() is undefined
+[00:12:21.170] Browser ERROR   uncaughtError: Error: Map container is being reused by another instance
+[00:12:23.937] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:12:23.960] Server  LOG      ✓ Compiled in 16ms
+[00:12:24.201] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:24.398] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:12:24.398] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:12:24.398] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765291218296}
+[00:12:24.780] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:25.013] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:12:25.013] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:12:25.013] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765291218907}
+[00:12:31.679] Server  LOG      ✓ Compiled in 16ms
+[00:12:32.081] Browser ERROR   uncaughtError: TypeError: can't access property "appendChild", this.getPane() is undefined
+[00:12:32.081] Browser ERROR   uncaughtError: Error: Map container is being reused by another instance
+[00:12:32.524] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:32.701] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:12:32.701] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:12:32.701] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765291226596}
+[00:12:35.435] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:35.736] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:12:35.736] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:12:35.736] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765291229631}
+[00:12:41.319] Server  LOG      ✓ Compiled in 15ms
+[00:12:41.756] Browser ERROR   uncaughtError: TypeError: can't access property "appendChild", this.getPane() is undefined
+[00:12:41.756] Browser ERROR   uncaughtError: Error: Map container is being reused by another instance
+[00:12:44.267] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:44.481] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:12:44.481] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:12:44.481] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765291238379}
+[00:31:10.867] Server  LOG      ✓ Compiled in 58ms
+[00:31:11.027] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:31:11.227] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:31:11.227] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:31:11.227] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765292345147}
+[00:31:12.242] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:31:12.536] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:31:12.537] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:31:12.537] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765292346459}
+[00:32:38.213] Server  LOG      ✓ Compiled in 34ms
+[00:32:39.902] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:32:40.110] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:32:40.110] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:32:40.110] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765292434011}
+[00:33:56.545] Server  LOG      ✓ Compiled in 12ms
+[00:33:59.042] Server  LOG      ✓ Compiled in 13ms
+[00:34:06.613] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:34:06.802] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:34:06.802] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:34:06.802] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765292520701}
+[00:34:42.412] Server  LOG      ✓ Compiled in 17ms
+[00:34:43.518] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:34:43.714] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:34:43.714] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:34:43.714] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765292557609}
+[00:34:44.913] Server  LOG      ✓ Compiled in 14ms
+[00:35:24.871] Server  LOG      ✓ Compiled in 15ms
+[00:35:25.846] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:35:26.030] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:35:26.030] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:35:26.030] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765292599924}
+[00:35:30.458] Server  LOG      ✓ Compiled in 29ms
+[00:35:30.561] Browser ERROR   ./components/header.tsx:27:19
+Parsing ecmascript source code failed
+  25 |           <Bell className="w-5 h-5 text-muted-foreground" />
+  26 |
+> 27 |           </Badge>
+     |                   ^
+> 28 |         </Button>
+     | ^^^^^^^^^
+  29 |       </div>
+  30 |     </header>
+  31 |   )
+
+Expected '</', got 'jsx text (
+        )'
+
+Import traces:
+  Client Component Browser:
+    ./components/header.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/header.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:36:29.865] Server  LOG      ✓ Compiled in 38ms
+[00:36:32.078] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:36:32.264] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:36:32.264] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:36:32.264] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765292666151}
+[00:36:37.733] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:36:38.039] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:36:38.039] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:36:38.039] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765292671929}
+[00:38:47.199] Server  LOG      ✓ Compiled in 30ms
+[00:38:47.306] Browser ERROR   ./components/leaflet-map.tsx:52:5
+Parsing ecmascript source code failed
+  50 |     const glowColor = isFixed ? 'bg-violet-500/30' : 'bg-orange-500/30'
+  51 |
+> 52 |     return L.divIcon({
+     |     ^^^^^^^^^^^^^^^^^^
+> 53 |         className: "custom-marker",
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 54 |         html: `
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 55 |       <div class="relative flex items-center justify-center">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 56 |         ${isLive ? `<div class="absolute w-12 h-12 rounded-full ${pingColor} animate-ping"></div>` : ''}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 57 |         ${isLive ? `<div class="absolute w-12 h-12 rounded-full ${glowColor}"></div>` : ''}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 58 |         <div class="relative w-10 h-10 rounded-full ${color} flex items-center justify-center shadow-lg border-2 border-zinc-900">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 59 |           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="${strokeColor}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 60 |             ${isFixed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 61 |             ? '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 62 |             : '<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 63 |         }
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 64 |           </svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 65 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 66 |       </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 67 |     `,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 68 |         iconSize: [48, 48],
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 69 |         iconAnchor: [24, 24],
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 70 |     })
+     | ^^^^^^^
+  71 | }
+  72 |
+  73 | const userIcon = L.divIcon({
+
+Return statement is not allowed here
+
+Import trace:
+  Client Component Browser:
+    ./components/leaflet-map.tsx [Client Component Browser]
+    ./components/map-view.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+[00:38:49.614] Server  ERROR    ⨯ ./components/leaflet-map.tsx:52:5
+Parsing ecmascript source code failed
+  50 |     const glowColor = isFixed ? 'bg-violet-500/30' : 'bg-orange-500/30'
+  51 |
+> 52 |     return L.divIcon({
+     |     ^^^^^^^^^^^^^^^^^^
+> 53 |         className: "custom-marker",
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 54 |         html: `
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 55 |       <div class="relative flex items-center justify-center">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 56 |         ${isLive ? `<div class="absolute w-12 h-12 rounded-full ${pingColor} animate-ping"></div>` : ''}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 57 |         ${isLive ? `<div class="absolute w-12 h-12 rounded-full ${glowColor}"></div>` : ''}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 58 |         <div class="relative w-10 h-10 rounded-full ${color} flex items-center justify-center shadow-lg border-2 border-zinc-900">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 59 |           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="${strokeColor}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 60 |             ${isFixed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 61 |             ? '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 62 |             : '<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 63 |         }
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 64 |           </svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 65 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 66 |       </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 67 |     `,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 68 |         iconSize: [48, 48],
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 69 |         iconAnchor: [24, 24],
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 70 |     })
+     | ^^^^^^^
+  71 | }
+  72 |
+  73 | const userIcon = L.divIcon({
+
+Return statement is not allowed here
+
+Import trace:
+  Client Component Browser:
+    ./components/leaflet-map.tsx [Client Component Browser]
+    ./components/map-view.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+
+[00:38:50.482] Browser ERROR   uncaughtError: Error: ./components/leaflet-map.tsx:52:5
+Parsing ecmascript source code failed
+  50 |     const glowColor = isFixed ? 'bg-violet-500/30' : 'bg-orange-500/30'
+  51 |
+> 52 |     return L.divIcon({
+     |     ^^^^^^^^^^^^^^^^^^
+> 53 |         className: "custom-marker",
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 54 |         html: `
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 55 |       <div class="relative flex items-center justify-center">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 56 |         ${isLive ? `<div class="absolute w-12 h-12 rounded-full ${pingColor} animate-ping"></div>` : ''}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 57 |         ${isLive ? `<div class="absolute w-12 h-12 rounded-full ${glowColor}"></div>` : ''}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 58 |         <div class="relative w-10 h-10 rounded-full ${color} flex items-center justify-center shadow-lg border-2 border-zinc-900">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 59 |           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="${strokeColor}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 60 |             ${isFixed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 61 |             ? '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 62 |             : '<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 63 |         }
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 64 |           </svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 65 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 66 |       </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 67 |     `,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 68 |         iconSize: [48, 48],
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 69 |         iconAnchor: [24, 24],
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 70 |     })
+     | ^^^^^^^
+  71 | }
+  72 |
+  73 | const userIcon = L.divIcon({
+
+Return statement is not allowed here
+
+Import trace:
+  Client Component Browser:
+    ./components/leaflet-map.tsx [Client Component Browser]
+    ./components/map-view.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+
+[00:38:50.638] Browser ERROR   ./components/leaflet-map.tsx:52:5
+Parsing ecmascript source code failed
+  50 |     const glowColor = isFixed ? 'bg-violet-500/30' : 'bg-orange-500/30'
+  51 |
+> 52 |     return L.divIcon({
+     |     ^^^^^^^^^^^^^^^^^^
+> 53 |         className: "custom-marker",
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 54 |         html: `
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 55 |       <div class="relative flex items-center justify-center">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 56 |         ${isLive ? `<div class="absolute w-12 h-12 rounded-full ${pingColor} animate-ping"></div>` : ''}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 57 |         ${isLive ? `<div class="absolute w-12 h-12 rounded-full ${glowColor}"></div>` : ''}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 58 |         <div class="relative w-10 h-10 rounded-full ${color} flex items-center justify-center shadow-lg border-2 border-zinc-900">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 59 |           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="${strokeColor}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 60 |             ${isFixed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 61 |             ? '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 62 |             : '<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 63 |         }
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 64 |           </svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 65 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 66 |       </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 67 |     `,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 68 |         iconSize: [48, 48],
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 69 |         iconAnchor: [24, 24],
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 70 |     })
+     | ^^^^^^^
+  71 | }
+  72 |
+  73 | const userIcon = L.divIcon({
+
+Return statement is not allowed here
+
+Import trace:
+  Client Component Browser:
+    ./components/leaflet-map.tsx [Client Component Browser]
+    ./components/map-view.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+[00:38:50.638] Browser ERROR   ./components/leaflet-map.tsx:52:5
+Parsing ecmascript source code failed
+  50 |     const glowColor = isFixed ? 'bg-violet-500/30' : 'bg-orange-500/30'
+  51 |
+> 52 |     return L.divIcon({
+     |     ^^^^^^^^^^^^^^^^^^
+> 53 |         className: "custom-marker",
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 54 |         html: `
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 55 |       <div class="relative flex items-center justify-center">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 56 |         ${isLive ? `<div class="absolute w-12 h-12 rounded-full ${pingColor} animate-ping"></div>` : ''}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 57 |         ${isLive ? `<div class="absolute w-12 h-12 rounded-full ${glowColor}"></div>` : ''}
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 58 |         <div class="relative w-10 h-10 rounded-full ${color} flex items-center justify-center shadow-lg border-2 border-zinc-900">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 59 |           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="${strokeColor}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 60 |             ${isFixed
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 61 |             ? '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 62 |             : '<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 63 |         }
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 64 |           </svg>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 65 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 66 |       </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 67 |     `,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 68 |         iconSize: [48, 48],
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 69 |         iconAnchor: [24, 24],
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 70 |     })
+     | ^^^^^^^
+  71 | }
+  72 |
+  73 | const userIcon = L.divIcon({
+
+Return statement is not allowed here
+
+Import trace:
+  Client Component Browser:
+    ./components/leaflet-map.tsx [Client Component Browser]
+    ./components/map-view.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+[00:38:54.036] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:38:54.320] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:38:54.320] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:38:54.320] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765292808213}
+[00:39:52.918] Server  LOG      ✓ Compiled in 22ms
+[00:39:54.021] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:39:54.308] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:39:54.308] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:39:54.308] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765292868204}
+[00:41:20.918] Server  LOG      ✓ Compiled in 32ms
+[00:41:22.186] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:41:22.341] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:41:22.341] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:41:22.341] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765292956235}
+[00:41:24.295] Server  LOG      ✓ Compiled in 16ms
+[00:42:20.093] Server  LOG      ✓ Compiled in 41ms
+[00:42:23.171] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:42:23.351] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:42:23.351] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:42:23.351] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765293017245}
+[00:42:47.744] Server  LOG      ✓ Compiled in 22ms

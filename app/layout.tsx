@@ -9,7 +9,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Cadê meu Bloco?",
-  description: "Track live carnival music locations and connect with friends"
+  description: "Carnaval em tempo real."
 }
 
 export default function RootLayout({

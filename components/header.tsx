@@ -13,7 +13,7 @@ export function Header() {
         </div>
         <div>
           <h1 className="text-lg font-bold text-foreground">Cadê meu Bloco?</h1>
-          <p className="text-xs text-muted-foreground">Alguma frase aqui</p>
+          <p className="text-xs text-muted-foreground">Carnaval em tempo real</p>
         </div>
       </div>
 
@@ -23,9 +23,9 @@ export function Header() {
         </Button>
         <Button variant="ghost" size="icon" className="relative">
           <Bell className="w-5 h-5 text-muted-foreground" />
-          <Badge className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 bg-secondary text-secondary-foreground text-xs">
+          {/*<Badge className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 bg-secondary text-secondary-foreground text-xs">
             3
-          </Badge>
+          </Badge>*/}
         </Button>
       </div>
     </header>
