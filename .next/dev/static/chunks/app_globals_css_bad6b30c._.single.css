@@ -101,6 +101,7 @@
     --color-blue-600: #155dfc;
     --color-indigo-600: #4f39f6;
     --color-indigo-700: #432dd7;
+    --color-violet-400: #a685ff;
     --color-violet-500: #8d54ff;
     --color-violet-600: #7f22fe;
     --color-purple-600: #9810fa;
@@ -161,6 +162,7 @@
       --color-blue-600: lab(44.0605% 29.0279 -86.0352);
       --color-indigo-600: lab(38.4009% 52.6132 -92.3857);
       --color-indigo-700: lab(32.4486% 49.2217 -84.6695);
+      --color-violet-400: lab(62.8239% 34.9159 -60.0512);
       --color-violet-500: lab(49.9355% 55.1776 -81.8963);
       --color-violet-600: lab(41.088% 68.9966 -91.995);
       --color-purple-600: lab(43.0295% 75.21 -86.5669);
@@ -1044,6 +1046,16 @@
     background-color: var(--color-orange-500);
   }
 
+  .bg-orange-500\/20 {
+    background-color: #fe6e0033;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-orange-500\/20 {
+      background-color: color-mix(in oklab, var(--color-orange-500) 20%, transparent);
+    }
+  }
+
   .bg-orange-500\/30 {
     background-color: #fe6e004d;
   }
@@ -1088,6 +1100,16 @@
 
   .bg-violet-500 {
     background-color: var(--color-violet-500);
+  }
+
+  .bg-violet-500\/20 {
+    background-color: #8d54ff33;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-violet-500\/20 {
+      background-color: color-mix(in oklab, var(--color-violet-500) 20%, transparent);
+    }
   }
 
   .bg-violet-500\/30 {
@@ -1448,6 +1470,10 @@
     color: var(--muted-foreground);
   }
 
+  .text-orange-400 {
+    color: var(--color-orange-400);
+  }
+
   .text-primary {
     color: var(--primary);
   }
@@ -1462,6 +1488,10 @@
 
   .text-secondary-foreground {
     color: var(--secondary-foreground);
+  }
+
+  .text-violet-400 {
+    color: var(--color-violet-400);
   }
 
   .text-white {
@@ -1617,6 +1647,18 @@
   @media (hover: hover) {
     .hover\:\!bg-orange-400:hover {
       background-color: var(--color-orange-400) !important;
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:\!bg-primary\/90:hover {
+      background-color: var(--primary) !important;
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:\!bg-primary\/90:hover {
+        background-color: color-mix(in oklab, var(--primary) 90%, transparent) !important;
+      }
     }
   }
 

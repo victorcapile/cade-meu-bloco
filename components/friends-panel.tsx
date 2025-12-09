@@ -146,8 +146,8 @@ export function FriendsPanel() {
             <TabsTrigger value="at-carnival" className="flex-1">
               No Carnaval
             </TabsTrigger>
-            <TabsTrigger value="going" className="flex-1">
-              Chegando
+            <TabsTrigger value="offline" className="flex-1">
+              Em casa
             </TabsTrigger>
           </TabsList>
         </Tabs>

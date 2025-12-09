@@ -342,7 +342,11 @@ export function MapView({ selectedStage, onSelectStage }: MapViewProps) {
             {/* Selected stage card */}
             {selectedStageData && (
                 <div className="absolute bottom-20 left-4 right-4 z-[1000]">
-                    <StageCard stage={selectedStageData} onClose={() => onSelectStage(null)} />
+                    <StageCard
+                        stage={selectedStageData}
+                        userLocation={userLocation}
+                        onClose={() => onSelectStage(null)}
+                    />
                 </div>
             )}
         </div>
