@@ -1,9 +1,11 @@
 // components/stage-card.tsx
 "use client"
 
-import { X, Navigation, Users, Share2, MapPin, Route } from "lucide-react"
+import { useState } from "react"
+import { X, Navigation, Users, Share2, MapPin, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { cn } from "@/lib/utils"
 
 interface StageCardProps {
     stage: {
@@ -12,16 +14,19 @@ interface StageCardProps {
         genre: string
         currentArtist: string
         location: { lat: number; lng: number }
+        address: string
         friendsCount: number
         isLive: boolean
         isFixed: boolean
         lastMoved: string
     }
     userLocation: { lat: number; lng: number }
+    isFavorite?: boolean
+    onToggleFavorite?: (id: string) => void
     onClose: () => void
 }
 
-export function StageCard({ stage, userLocation, onClose }: StageCardProps) {
+export function StageCard({ stage, userLocation, isFavorite = false, onToggleFavorite, onClose }: StageCardProps) {
     const handleNavigate = () => {
         const origin = `${userLocation.lat},${userLocation.lng}`
         const destination = `${stage.location.lat},${stage.location.lng}`
@@ -59,22 +64,33 @@ export function StageCard({ stage, userLocation, onClose }: StageCardProps) {
                             </Badge>
                         )}
                         {stage.isFixed ? (
-                            <Badge variant="secondary" className="bg-violet-500/20 text-violet-400 text-[10px] px-1.5 py-0 flex items-center gap-0.5">
-                                <MapPin className="w-2.5 h-2.5" />
+                            <Badge variant="secondary" className="bg-violet-500/20 text-violet-400 text-[10px] px-1.5 py-0">
                                 Fixo
                             </Badge>
                         ) : (
-                            <Badge variant="secondary" className="bg-orange-500/20 text-orange-400 text-[10px] px-1.5 py-0 flex items-center gap-0.5">
-                                <Route className="w-2.5 h-2.5" />
+                            <Badge variant="secondary" className="bg-orange-500/20 text-orange-400 text-[10px] px-1.5 py-0">
                                 Móvel
                             </Badge>
                         )}
                     </div>
-                    <p className="text-xs text-muted-foreground">{stage.genre}</p>
+                    <p className="text-xs text-muted-foreground flex items-center gap-1">
+                        <MapPin className="w-3 h-3" />
+                        {stage.address}
+                    </p>
                 </div>
-                <Button variant="ghost" size="icon" onClick={onClose} className="h-6 w-6 hover:!bg-zinc-800">
-                    <X className="w-3 h-3" />
-                </Button>
+                <div className="flex items-center gap-1">
+                    <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={() => onToggleFavorite?.(stage.id)}
+                        className="h-6 w-6 hover:!bg-zinc-800"
+                    >
+                        <Star className={cn("w-3.5 h-3.5", isFavorite ? "fill-yellow-400 text-yellow-400" : "text-muted-foreground")} />
+                    </Button>
+                    <Button variant="ghost" size="icon" onClick={onClose} className="h-6 w-6 hover:!bg-zinc-800">
+                        <X className="w-3 h-3" />
+                    </Button>
+                </div>
             </div>
 
             <div className="bg-muted rounded-lg p-2 mb-2">

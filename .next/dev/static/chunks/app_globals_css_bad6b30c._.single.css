@@ -1513,6 +1513,10 @@
     fill: var(--primary);
   }
 
+  .fill-yellow-400 {
+    fill: var(--color-yellow-400);
+  }
+
   .object-cover {
     object-fit: cover;
   }

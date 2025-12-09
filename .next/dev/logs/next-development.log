@@ -10893,3 +10893,356 @@ Import traces:
 [04:56:29.854] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765308263796}
 [04:57:43.804] Server  LOG      ✓ Compiled in 20ms
 [04:58:01.529] Server  LOG      ✓ Compiled in 22ms
+[05:01:31.238] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:01:31.367] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:01:31.367] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[05:01:31.367] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765308565310}
+[05:08:50.920] Server  LOG      ✓ Compiled in 34ms
+[05:08:51.315] Browser ERROR   uncaughtError: TypeError: can't access property "appendChild", this.getPane() is undefined
+[05:08:51.315] Browser ERROR   uncaughtError: Error: Map container is being reused by another instance
+[05:09:12.877] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:09:12.899] Server  LOG      ✓ Compiled in 20ms
+[05:09:13.344] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:09:13.471] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:09:13.471] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[05:09:13.471] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765309027463}
+[05:09:32.324] Server  LOG      ✓ Compiled in 19ms
+[05:09:32.726] Browser ERROR   uncaughtError: TypeError: can't access property "appendChild", this.getPane() is undefined
+[05:09:32.726] Browser ERROR   uncaughtError: Error: Map container is being reused by another instance
+[05:09:33.794] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:09:33.817] Server  LOG      ✓ Compiled in 24ms
+[05:09:34.101] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:09:34.240] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:09:34.240] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[05:09:34.240] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765309048235}
+[05:09:38.896] Server  LOG      ✓ Compiled in 23ms
+[05:09:39.000] Browser ERROR   ./components/map-view.tsx:76:1
+Parsing ecmascript source code failed
+  74 |         location: { lat: -22.9175, lng: -43.1825 },
+  75 |         address: "R. Primeiro de Março, Centro",
+> 76 | \
+     | ^
+  77 |         friendsCount: 18,
+  78 |         isLive: true,
+  79 |         isFixed: false,
+
+Expected unicode escape
+
+Import traces:
+  Client Component Browser:
+    ./components/map-view.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/map-view.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[05:09:39.734] Browser ERROR   uncaughtError: TypeError: can't access property "appendChild", this.getPane() is undefined
+[05:09:39.734] Browser ERROR   uncaughtError: Error: Map container is being reused by another instance
+[05:09:44.686] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:09:44.708] Server  LOG      ✓ Compiled in 21ms
+[05:09:45.013] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:09:45.138] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:09:45.138] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[05:09:45.138] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765309059134}
+[05:09:49.022] Server  LOG      ✓ Compiled in 21ms
+[05:09:49.435] Browser ERROR   uncaughtError: TypeError: can't access property "appendChild", this.getPane() is undefined
+[05:09:49.435] Browser ERROR   uncaughtError: Error: Map container is being reused by another instance
+[05:09:51.947] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:09:51.965] Server  LOG      ✓ Compiled in 20ms
+[05:09:52.297] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:09:52.419] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:09:52.419] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[05:09:52.419] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765309066414}
+[05:09:55.013] Server  LOG      ✓ Compiled in 26ms
+[05:09:55.418] Browser ERROR   uncaughtError: TypeError: can't access property "appendChild", this.getPane() is undefined
+[05:09:55.418] Browser ERROR   uncaughtError: Error: Map container is being reused by another instance
+[05:09:57.664] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:09:57.690] Server  LOG      ✓ Compiled in 17ms
+[05:09:57.955] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:09:58.135] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:09:58.135] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[05:09:58.135] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765309072129}
+[05:10:00.351] Server  LOG      ✓ Compiled in 28ms
+[05:10:00.777] Browser ERROR   uncaughtError: TypeError: can't access property "appendChild", this.getPane() is undefined
+[05:10:00.777] Browser ERROR   uncaughtError: Error: Map container is being reused by another instance
+[05:10:02.864] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:10:02.888] Server  LOG      ✓ Compiled in 20ms
+[05:10:03.200] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:10:03.321] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:10:03.321] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[05:10:03.321] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765309077317}
+[05:10:08.050] Server  LOG      ✓ Compiled in 21ms
+[05:10:08.456] Browser ERROR   uncaughtError: TypeError: can't access property "appendChild", this.getPane() is undefined
+[05:10:08.456] Browser ERROR   uncaughtError: Error: Map container is being reused by another instance
+[05:10:10.569] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:10:10.594] Server  LOG      ✓ Compiled in 19ms
+[05:10:10.880] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:10:11.010] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:10:11.010] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[05:10:11.010] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765309085006}
+[05:10:15.443] Server  LOG      ✓ Compiled in 27ms
+[05:10:15.849] Browser ERROR   uncaughtError: TypeError: can't access property "appendChild", this.getPane() is undefined
+[05:10:15.849] Browser ERROR   uncaughtError: Error: Map container is being reused by another instance
+[05:10:19.275] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:10:19.456] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:10:19.456] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[05:10:19.456] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765309093449}
+[05:10:40.971] Server  LOG      ✓ Compiled in 24ms
+[05:10:41.380] Browser ERROR   uncaughtError: TypeError: can't access property "appendChild", this.getPane() is undefined
+[05:10:41.380] Browser ERROR   uncaughtError: Error: Map container is being reused by another instance
+[05:10:44.649] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:10:44.667] Server  LOG      ✓ Compiled in 16ms
+[05:10:45.017] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:10:45.150] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:10:45.150] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[05:10:45.150] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765309119142}
+[05:10:48.920] Server  LOG      ✓ Compiled in 23ms
+[05:10:49.314] Browser ERROR   uncaughtError: TypeError: can't access property "appendChild", this.getPane() is undefined
+[05:10:49.314] Browser ERROR   uncaughtError: Error: Map container is being reused by another instance
+[05:10:51.551] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:10:51.575] Server  LOG      ✓ Compiled in 16ms
+[05:10:51.822] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:10:52.000] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:10:52.000] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[05:10:52.000] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765309125997}
+[05:10:54.547] Server  LOG      ✓ Compiled in 24ms
+[05:10:54.954] Browser ERROR   uncaughtError: TypeError: can't access property "appendChild", this.getPane() is undefined
+[05:10:54.954] Browser ERROR   uncaughtError: Error: Map container is being reused by another instance
+[05:10:58.879] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:10:58.898] Server  LOG      ✓ Compiled in 16ms
+[05:10:59.139] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:10:59.342] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:10:59.342] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[05:10:59.342] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765309133337}
+[05:11:02.844] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:11:03.134] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:11:03.134] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[05:11:03.134] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765309137126}
+[05:11:05.611] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:11:05.887] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:11:05.887] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[05:11:05.887] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765309139883}
+[05:11:09.514] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:11:09.795] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:11:09.795] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[05:11:09.795] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765309143790}
+[05:11:11.519] Browser ERROR   Erro ao obter localização: {}
+[05:11:58.600] Server  LOG      ✓ Compiled in 20ms
+[05:12:21.634] Server  LOG      ✓ Compiled in 27ms
+[05:12:21.745] Browser ERROR   ./components/stage-card.tsx:74:22
+Parsing ecmascript source code failed
+  72 |                         )}
+  73 |                     </div>
+> 74 |                     <<p className="text-xs text-muted-foreground flex items-center gap-1">
+     |                      ^
+  75 |                     <MapPin className="w-3 h-3" />
+  76 |                         {stage.address}
+  77 |                 </p>
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/stage-card.tsx [Client Component Browser]
+    ./components/map-view.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/stage-card.tsx [Client Component SSR]
+    ./components/map-view.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[05:12:34.053] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:12:34.249] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:12:34.249] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[05:12:34.249] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765309228242}
+[05:14:14.975] Server  LOG      ✓ Compiled in 61ms
+[05:14:15.169] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:14:15.312] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:14:15.312] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[05:14:15.312] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765309329299}
+[05:14:34.751] Server  LOG      ✓ Compiled in 32ms
+[05:14:34.793] Server  ERROR   Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[05:14:35.017] Server  ERROR    ⨯ TypeError: Cannot read properties of null (reading 'useState')
+[05:14:35.176] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:14:35.310] Browser ERROR   uncaughtError: Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[05:15:15.070] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:15:15.070] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/map-view.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[05:15:15.070] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:15:15.174] Server  LOG      ✓ Compiled in 23ms
+[05:15:15.211] Server  ERROR   Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[05:15:15.358] Server  ERROR    ⨯ TypeError: Cannot read properties of null (reading 'useState')
+[05:15:15.517] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:15:15.651] Browser ERROR   uncaughtError: Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[05:15:16.730] Server  ERROR    ⨯ TypeError: Cannot read properties of null (reading 'useState')
+[05:15:16.836] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:15:16.965] Browser ERROR   uncaughtError: Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[05:17:07.769] Server  LOG      ✓ Compiled in 30ms
+[05:17:07.877] Browser ERROR   ./components/map-view.tsx:290:9
+Parsing ecmascript source code failed
+  288 | }
+  289 |
+> 290 | eexport function MapView({ selectedStage, onSelectStage }: MapViewProps) {
+      |         ^^^^^^^^
+  291 |     const [stages] = useState(initialStages)
+  292 |     const [userLocation, setUserLocation] = useState(DEFAULT_LOCATION)
+  293 |     const [isLoadingLocation, setIsLoadingLocation] = useState(true)
+
+Expected ';', '}' or <eof>
+
+Import traces:
+  Client Component Browser:
+    ./components/map-view.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/map-view.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[05:17:10.643] Server  ERROR    ⨯ ./components/map-view.tsx:290:9
+Parsing ecmascript source code failed
+  288 | }
+  289 |
+> 290 | eexport function MapView({ selectedStage, onSelectStage }: MapViewProps) {
+      |         ^^^^^^^^
+  291 |     const [stages] = useState(initialStages)
+  292 |     const [userLocation, setUserLocation] = useState(DEFAULT_LOCATION)
+  293 |     const [isLoadingLocation, setIsLoadingLocation] = useState(true)
+
+Expected ';', '}' or <eof>
+
+Import traces:
+  Client Component Browser:
+    ./components/map-view.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/map-view.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+[05:17:10.771] Browser ERROR   uncaughtError: Error: ./components/map-view.tsx:290:9
+Parsing ecmascript source code failed
+  288 | }
+  289 |
+> 290 | eexport function MapView({ selectedStage, onSelectStage }: MapViewProps) {
+      |         ^^^^^^^^
+  291 |     const [stages] = useState(initialStages)
+  292 |     const [userLocation, setUserLocation] = useState(DEFAULT_LOCATION)
+  293 |     const [isLoadingLocation, setIsLoadingLocation] = useState(true)
+
+Expected ';', '}' or <eof>
+
+Import traces:
+  Client Component Browser:
+    ./components/map-view.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/map-view.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+[05:17:10.908] Browser ERROR   ./components/map-view.tsx:290:9
+Parsing ecmascript source code failed
+  288 | }
+  289 |
+> 290 | eexport function MapView({ selectedStage, onSelectStage }: MapViewProps) {
+      |         ^^^^^^^^
+  291 |     const [stages] = useState(initialStages)
+  292 |     const [userLocation, setUserLocation] = useState(DEFAULT_LOCATION)
+  293 |     const [isLoadingLocation, setIsLoadingLocation] = useState(true)
+
+Expected ';', '}' or <eof>
+
+Import traces:
+  Client Component Browser:
+    ./components/map-view.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/map-view.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[05:17:10.908] Browser ERROR   ./components/map-view.tsx:290:9
+Parsing ecmascript source code failed
+  288 | }
+  289 |
+> 290 | eexport function MapView({ selectedStage, onSelectStage }: MapViewProps) {
+      |         ^^^^^^^^
+  291 |     const [stages] = useState(initialStages)
+  292 |     const [userLocation, setUserLocation] = useState(DEFAULT_LOCATION)
+  293 |     const [isLoadingLocation, setIsLoadingLocation] = useState(true)
+
+Expected ';', '}' or <eof>
+
+Import traces:
+  Client Component Browser:
+    ./components/map-view.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/map-view.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[05:17:17.364] Server  ERROR   Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[05:17:17.544] Server  ERROR    ⨯ TypeError: Cannot read properties of null (reading 'useState')
+[05:17:17.675] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:17:17.800] Browser ERROR   uncaughtError: Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[05:17:22.180] Server  ERROR    ⨯ TypeError: Cannot read properties of null (reading 'useState')
+[05:17:22.310] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:17:22.440] Browser ERROR   uncaughtError: Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[05:18:33.804] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:18:33.804] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/map-view.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[05:18:33.805] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:18:33.829] Server  LOG      ✓ Compiled in 27ms
+[05:18:34.083] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:18:34.221] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:18:34.221] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[05:18:34.221] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765309588218}
+[05:18:49.562] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:18:49.843] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:18:49.843] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[05:18:49.843] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765309603838}

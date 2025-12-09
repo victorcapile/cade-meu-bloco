@@ -22,6 +22,7 @@ interface MusicStage {
     genre: string
     currentArtist: string
     location: { lat: number; lng: number }
+    address: string  // novo campo
     friendsCount: number
     isLive: boolean
     isFixed: boolean
@@ -35,6 +36,7 @@ const initialStages: MusicStage[] = [
         genre: "Marchinhas",
         currentArtist: "Orquestra Bola Preta",
         location: { lat: -22.9028, lng: -43.1778 },
+        address: "R. Primeiro de Março, Centro",
         friendsCount: 45,
         isLive: true,
         isFixed: false,
@@ -46,6 +48,7 @@ const initialStages: MusicStage[] = [
         genre: "Percussão",
         currentArtist: "Monobloco Band",
         location: { lat: -22.9035, lng: -43.1745 },
+        address: "R. Primeiro de Março, Centro",
         friendsCount: 32,
         isLive: true,
         isFixed: false,
@@ -57,6 +60,7 @@ const initialStages: MusicStage[] = [
         genre: "Funk & Pop",
         currentArtist: "Anitta",
         location: { lat: -22.9055, lng: -43.1795 },
+        address: "R. Primeiro de Março, Centro",
         friendsCount: 58,
         isLive: true,
         isFixed: true,
@@ -68,6 +72,7 @@ const initialStages: MusicStage[] = [
         genre: "Marchinhas",
         currentArtist: "Banda Carmelitas",
         location: { lat: -22.9175, lng: -43.1825 },
+        address: "R. Primeiro de Março, Centro",
         friendsCount: 18,
         isLive: true,
         isFixed: false,
@@ -79,6 +84,7 @@ const initialStages: MusicStage[] = [
         genre: "Maracatu",
         currentArtist: "Céu na Terra",
         location: { lat: -22.9195, lng: -43.1870 },
+        address: "R. Primeiro de Março, Centro",
         friendsCount: 12,
         isLive: true,
         isFixed: false,
@@ -90,6 +96,7 @@ const initialStages: MusicStage[] = [
         genre: "Samba",
         currentArtist: "Quizomba",
         location: { lat: -22.9135, lng: -43.1805 },
+        address: "R. Primeiro de Março, Centro",
         friendsCount: 22,
         isLive: true,
         isFixed: true,
@@ -101,6 +108,7 @@ const initialStages: MusicStage[] = [
         genre: "Marchinhas",
         currentArtist: "Banda de Ipanema",
         location: { lat: -22.9838, lng: -43.1985 },
+        address: "R. Primeiro de Março, Centro",
         friendsCount: 28,
         isLive: true,
         isFixed: false,
@@ -112,6 +120,7 @@ const initialStages: MusicStage[] = [
         genre: "MPB",
         currentArtist: "Simpatia Band",
         location: { lat: -22.9865, lng: -43.1920 },
+        address: "R. Primeiro de Março, Centro",
         friendsCount: 35,
         isLive: true,
         isFixed: false,
@@ -123,6 +132,7 @@ const initialStages: MusicStage[] = [
         genre: "Pop & Axé",
         currentArtist: "Preta Gil",
         location: { lat: -22.9668, lng: -43.1815 },
+        address: "R. Primeiro de Março, Centro",
         friendsCount: 42,
         isLive: true,
         isFixed: true,
@@ -134,6 +144,7 @@ const initialStages: MusicStage[] = [
         genre: "Funk",
         currentArtist: "Ludmilla",
         location: { lat: -22.9705, lng: -43.1825 },
+        address: "R. Primeiro de Março, Centro",
         friendsCount: 55,
         isLive: true,
         isFixed: true,
@@ -145,6 +156,7 @@ const initialStages: MusicStage[] = [
         genre: "Samba",
         currentArtist: "Boka de Espuma",
         location: { lat: -22.9515, lng: -43.1835 },
+        address: "R. Primeiro de Março, Centro",
         friendsCount: 15,
         isLive: true,
         isFixed: false,
@@ -156,6 +168,7 @@ const initialStages: MusicStage[] = [
         genre: "Samba",
         currentArtist: "Estica Band",
         location: { lat: -22.9325, lng: -43.1765 },
+        address: "R. Primeiro de Março, Centro",
         friendsCount: 19,
         isLive: false,
         isFixed: false,
@@ -167,6 +180,7 @@ const initialStages: MusicStage[] = [
         genre: "Pop Rock",
         currentArtist: "Filhos da P!",
         location: { lat: -22.9875, lng: -43.2235 },
+        address: "R. Primeiro de Março, Centro",
         friendsCount: 25,
         isLive: true,
         isFixed: true,
@@ -178,6 +192,7 @@ const initialStages: MusicStage[] = [
         genre: "Samba",
         currentArtist: "Jiló Band",
         location: { lat: -22.9245, lng: -43.2325 },
+        address: "R. Primeiro de Março, Centro",
         friendsCount: 20,
         isLive: true,
         isFixed: false,
@@ -189,6 +204,7 @@ const initialStages: MusicStage[] = [
         genre: "Samba",
         currentArtist: "Gargalhada",
         location: { lat: -22.9165, lng: -43.2415 },
+        address: "R. Primeiro de Março, Centro",
         friendsCount: 18,
         isLive: true,
         isFixed: false,
@@ -200,6 +216,7 @@ const initialStages: MusicStage[] = [
         genre: "Axé & Pop",
         currentArtist: "Banda da Barra",
         location: { lat: -23.0005, lng: -43.3655 },
+        address: "R. Primeiro de Março, Centro",
         friendsCount: 30,
         isLive: true,
         isFixed: true,
@@ -211,6 +228,7 @@ const initialStages: MusicStage[] = [
         genre: "Samba",
         currentArtist: "Carijó Band",
         location: { lat: -22.8165, lng: -43.2095 },
+        address: "R. Primeiro de Março, Centro",
         friendsCount: 15,
         isLive: true,
         isFixed: false,
@@ -222,6 +240,7 @@ const initialStages: MusicStage[] = [
         genre: "Samba",
         currentArtist: "Loucura Suburbana",
         location: { lat: -22.8965, lng: -43.2925 },
+        address: "R. Primeiro de Março, Centro",
         friendsCount: 24,
         isLive: true,
         isFixed: false,
@@ -233,6 +252,7 @@ const initialStages: MusicStage[] = [
         genre: "Samba",
         currentArtist: "Virilha Band",
         location: { lat: -22.8735, lng: -43.4635 },
+        address: "R. Primeiro de Março, Centro",
         friendsCount: 17,
         isLive: true,
         isFixed: false,
@@ -244,6 +264,7 @@ const initialStages: MusicStage[] = [
         genre: "MPB",
         currentArtist: "Arteiros",
         location: { lat: -22.9225, lng: -43.1755 },
+        address: "R. Primeiro de Março, Centro",
         friendsCount: 21,
         isLive: true,
         isFixed: false,
@@ -263,7 +284,14 @@ export function MapView({ selectedStage, onSelectStage }: MapViewProps) {
     const [userLocation, setUserLocation] = useState(DEFAULT_LOCATION)
     const [isLoadingLocation, setIsLoadingLocation] = useState(true)
     const [locationError, setLocationError] = useState<string | null>(null)
+    const [favorites, setFavorites] = useState<string[]>([])  // CERTO - dentro do componente
     const mapRef = useRef<LeafletMapRef>(null)
+
+    const toggleFavorite = (id: string) => {
+        setFavorites((prev) =>
+            prev.includes(id) ? prev.filter((f) => f !== id) : [...prev, id]
+        )
+    }
 
     useEffect(() => {
         if (!navigator.geolocation) {
@@ -383,10 +411,12 @@ export function MapView({ selectedStage, onSelectStage }: MapViewProps) {
 
             {/* Card na parte inferior */}
             {selectedStageData && (
-                <div className="absolute bottom-10 left-4 right-4 max-w-md mx-auto z-[1000]">
+                <div className="absolute bottom-16 left-4 right-4 max-w-md mx-auto z-[1000]">
                     <StageCard
                         stage={selectedStageData}
                         userLocation={userLocation}
+                        isFavorite={favorites.includes(selectedStageData.id)}
+                        onToggleFavorite={toggleFavorite}
                         onClose={() => onSelectStage(null)}
                     />
                 </div>
