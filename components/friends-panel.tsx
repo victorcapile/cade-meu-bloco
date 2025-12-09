@@ -12,7 +12,7 @@ interface Friend {
   id: string
   name: string
   avatar: string
-  status: "at-carnival" | "going" | "maybe" | "offline"
+  status: "at-carnival" | "maybe" | "offline"
   currentStage?: string
   socialPlatform: "instagram" | "whatsapp"
   lastSeen?: string
@@ -33,15 +33,15 @@ const mockFriends: Friend[] = [
     avatar: "/man-festival-outfit.jpg",
     status: "at-carnival",
     currentStage: "Cordão do Bola Preta",
-    socialPlatform: "whatsapp",
+    socialPlatform: "instagram",
   },
   {
     id: "3",
     name: "Maria Silva",
     avatar: "/woman-party-outfit.jpg",
-    status: "going",
+    status: "offline",
     socialPlatform: "instagram",
-    lastSeen: "Arriving in 30 min",
+    lastSeen: "Em casa",
   },
   {
     id: "4",
@@ -49,23 +49,24 @@ const mockFriends: Friend[] = [
     avatar: "/man-casual-party.jpg",
     status: "at-carnival",
     currentStage: "Bloco da Preta",
-    socialPlatform: "whatsapp",
+    socialPlatform: "instagram",
   },
   {
     id: "5",
     name: "Lucia Ferreira",
     avatar: "/woman-summer-dress.jpg",
-    status: "maybe",
-    socialPlatform: "instagram",
-    lastSeen: "Might join later",
+    status: "at-carnival",
+      currentStage: "Carmelitas",
+      socialPlatform: "instagram",
+    lastSeen: "",
   },
   {
     id: "6",
     name: "Rafael Lima",
     avatar: "/man-sunglasses-beach.jpg",
     status: "offline",
-    socialPlatform: "whatsapp",
-    lastSeen: "Last seen 2h ago",
+    socialPlatform: "instagram",
+    lastSeen: "Em casa",
   },
 ]
 
